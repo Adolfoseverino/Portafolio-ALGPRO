@@ -1,8 +1,13 @@
 def MostrarTabla(tablaMultiplicar):
     multiplicando = 1
+    suma = 0
     while multiplicando <= 12:
         nuevoValor = tablaMultiplicar * multiplicando
         print ("{0} * {1} = {2}" .format(tablaMultiplicar, multiplicando,nuevoValor))
         multiplicando = multiplicando + 1
+        suma = suma + nuevoValor
+    return suma
 tabla = int(input("digite la tabla que desea"))
-MostrarTabla(tabla)
+resultado = MostrarTabla(tabla)
+print (resultado)
+
