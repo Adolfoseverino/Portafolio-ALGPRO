@@ -1,10 +1,18 @@
-p,q=1,0
-Dividendo=int(input("Ingresa Dividendo"))
-Divisor=int(input("Ingresa Divisor"))
-if(Dividendo>=Divisor):
- while((Dividendo-Divisor)>=q):
-  q=Divisor*p
-  p=p+1
- print("El cociente es "+str(p)+" y el residuo es "+str((Dividendo-q)))
-else:
- print("el denominador debe ser menor")
+def CalcularResiduo(divisor , dividendo):
+    while divisor > dividendo :
+        divisor = divisor - dividendo
+
+    return divisor
+
+divisor = -1
+dividendo = -1
+
+while divisor < 0 or dividendo < 0:
+    divisor = int(input("digite el divisor"))
+    dividendo = int(input("digite el dividendo"))
+
+    if divisor < 0 or dividendo < 0:
+        print ("solo positivos")
+    else:
+        resultado = CalcularResiduo(divisor,dividendo)
+print (resultado)
